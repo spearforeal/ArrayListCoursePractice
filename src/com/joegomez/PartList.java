@@ -26,11 +26,15 @@ public class PartList {
     }
     private void modifyComputerPart(int position, String newItem){
         partList.set(position, newItem);
-        System.out.println();
+        System.out.println("Part item " + (position+1) + " has been modified");
     }
-    public void removeComputerPart(String item){
+    public void removeComputerPart(String item) {
+        int position = findPart(item);
+        if (position >= 0) {
+            removeComputerPart(position);
+        }
+    }
 
-    }
     private void removeComputerPart(int position){
         partList.remove(position);
     }
