@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Main {
     private static Scanner scanner = new Scanner(System.in);
-
+    private static PartList partList = new PartList();
     public static void main(String[] args) {
     }
     public static void printMenu(){
@@ -26,12 +26,14 @@ public class Main {
         System.out.println("Enter replacement item: ");
     }
     public static void removePart(){
+        System.out.println("Enter the item you want to remove: ");
 
     }
     public static void listAllParts(){
 
     }
     public static void searchForParts(){
+        System.out.println("Enter item name: ");
 
     }
 }
