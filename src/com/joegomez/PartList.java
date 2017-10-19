@@ -6,8 +6,10 @@ import java.util.ArrayList;
  * Created by joeandrewgomez on 10/18/17.
  */
 public class PartList {
+
     private ArrayList<String> partList = new ArrayList<>();
     public ArrayList<String> getPartList(){return partList;}
+    public PriceCalc priceCalc = new PriceCalc();
     public void addComputerPart(String item){
         partList.add(item);
     }
@@ -25,7 +27,10 @@ public class PartList {
         }
     }
     private void modifyComputerPart(int position, String newItem){
+        int anotherPosition = position;
         partList.set(position, newItem);
+        int anotherCounterItem = Integer.parseInt(newItem);
+        priceCalc.modCalculator(anotherPosition, anotherCounterItem);
         System.out.println("Part item " + (position+1) + " has been modified");
     }
     public void removeComputerPart(String item) {
